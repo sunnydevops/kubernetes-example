@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: jenkins-rs
+  labels:
+    version: 1.0.0
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      project: My-Project
+  template:
+    metadata:
+      labels:
+        project: My-Project
+    spec:
+      containers:
+      - name: my-jenkins-pod-for-rs
+        image: jenkins
+        ports:
+        - containerPort: 8080
