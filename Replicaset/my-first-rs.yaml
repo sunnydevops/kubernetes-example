@@ -9,12 +9,10 @@ spec:
   selector:
     matchLabels:
       project: my-Project
-      ver: 1.0
   template:
     metadata:
       labels:
         project: my-Project
-        ver: 1.0
     spec:
       containers:
       - name: my-pods-for-rs
