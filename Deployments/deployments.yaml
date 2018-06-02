@@ -18,6 +18,7 @@ spec:
       labels:
         app: nginx
     spec:
+      hostNetwork: true
       containers:
       - name: my-first-deployment
         image: httpd
