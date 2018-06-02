@@ -21,6 +21,7 @@ spec:
       hostNetwork: true
       containers:
       - name: my-first-deployment
-        image: httpd
+        #image: httpd
+        image: nginx
         ports:
         - containerPort: 80
